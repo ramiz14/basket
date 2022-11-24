@@ -1,0 +1,28 @@
+.bi{
+    font-size: 30px
+}
+#spn{
+    position: absolute;
+    top: 3%;
+    background-color: rgb(255, 68, 55);
+    padding: 0px 8px ;
+    border-radius: 1000px;
+    left: 5%;
+    color: white;
+    
+}
+#form{
+    position: relative;
+}
+#form a{
+    color: black !important;
+}
+.card img{
+    height: 200px;
+}
+.empty{
+    margin-top: 15%;
+}
+.empty .fa-shopping-bag{
+    font-size: 50px;
+}
