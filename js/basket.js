@@ -11,17 +11,18 @@ else{
 function List() {
     let basket=JSON.parse(localStorage.getItem('products'))
     for(let pr of basket){
-        document.getElementById('bdy').innerHTML+=`
+        let row=`
         <tr>
         <th scope="row">${pr.Id}</th>
-        <td><img class='img' src="${pr.Img}" alt=""></td>
+        <td class=t-img><img class='img' src="${pr.Img}" alt=""></td>
         <td>${pr.Name}</td>
         <td>${pr.Price}</td>
-        <td>${pr.Count}<td>
-        <td>${pr.Price_num*pr.Count}$<td>
+        <td><button type="button" class="btn plus btn-outline-light btn-sm">+</button> <span>${pr.Count}</span> <button type="button" class="btn minus btn-outline-light btn-sm">-</button></td>
+        <td>${pr.Price_num*pr.Count}$</td>
       </tr>
-    
-        `  
+        `
+        document.getElementById('bdy').innerHTML+= row 
+       
     }
 }
 function summary() {
@@ -29,7 +30,35 @@ function summary() {
     for(let pr of basket){
         cem+=pr.Price_num*pr.Count 
     }
-    console.log(cem);
     document.getElementById('um').innerHTML+=`${cem}$`
 }
 summary()
+let plus=document.querySelectorAll('.plus')
+let minus=document.querySelectorAll('.minus')
+let x=1
+for(btn of plus){
+    btn.onclick=function () {
+        x++
+        let id =this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
+        console.log(id);
+        for(let pr of basket){
+            if (pr.Id===id) {
+               pr.Count=x
+            }
+        }
+        localStorage.setItem('products',JSON.stringify(basket))  
+    }
+}
+for(but of minus){
+    but.onclick=function () {
+        for(let pr of basket){
+            if (pr.Id===id&&pr.Count>1) {
+                x--
+               pr.Count=x
+            }
+        }
+        localStorage.setItem('products',JSON.stringify(basket))  
+    }
+    
+}
+

@@ -31,7 +31,8 @@ for(btn of buttons){
             find_pr.Count+=1
         }
         localStorage.setItem('products',JSON.stringify(basket))   
-          Count()   
+        Count()   
+        
            
     }
 }
@@ -41,3 +42,4 @@ function Count() {
     spn.innerHTML=basket.length;
 }
 Count()
+
