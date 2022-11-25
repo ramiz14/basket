@@ -9,10 +9,12 @@ for(btn of buttons){
         let price=this.previousElementSibling.innerHTML
         let pr_name=this.previousElementSibling.previousElementSibling.innerHTML
         let img=this.parentElement.previousElementSibling.src  
+        let num=this.previousElementSibling.lastElementChild.innerHTML
+        
 
         let basket=JSON.parse(localStorage.getItem('products'))
         let find_pr=basket.find(x=>x.Id===id)
-        console.log(find_pr);
+        
         
         if (find_pr===undefined) {
             basket.push({
@@ -20,7 +22,8 @@ for(btn of buttons){
                Img:img,
                Price:price,
                Name:pr_name,
-               Count:1
+               Count:1,
+               Price_num:num
             })
             
         }

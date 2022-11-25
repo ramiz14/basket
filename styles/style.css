@@ -26,3 +26,26 @@
 .empty .fa-shopping-bag{
     font-size: 50px;
 }
+#inc{
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: white;
+}
+#dcr{
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: white;
+}
+#spn{
+    border: 1px solid rgb(22, 20, 20);
+}
+#full{
+    margin-top: 4rem;    
+}
+.img{
+    width: 20%;
+}
+#um{
+    position: absolute;
+    right: 6.5%;
+}
