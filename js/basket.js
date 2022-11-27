@@ -40,25 +40,27 @@ for(btn of plus){
     btn.onclick=function () {
         x++
         let id =this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
-        console.log(id);
+        
         for(let pr of basket){
             if (pr.Id===id) {
-               pr.Count=x
+               pr.Count++
             }
         }
         localStorage.setItem('products',JSON.stringify(basket))  
     }
 }
+
 for(but of minus){
     but.onclick=function () {
+        let id =this.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
         for(let pr of basket){
-            if (pr.Id===id&&pr.Count>1) {
-                x--
-               pr.Count=x
+            if (pr.Id===id && pr.Count>1) {
+                
+               pr.Count--
+               console.log(pr.Count);
             }
         }
         localStorage.setItem('products',JSON.stringify(basket))  
     }
-    
 }
 
