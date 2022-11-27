@@ -17,7 +17,7 @@ function List() {
         <td class=t-img><img class='img' src="${pr.Img}" alt=""></td>
         <td>${pr.Name}</td>
         <td>${pr.Price}</td>
-        <td><button type="button" class="btn plus btn-outline-light btn-sm">+</button> <span>${pr.Count}</span> <button type="button" class="btn minus btn-outline-light btn-sm">-</button></td>
+        <td><button type="button" class="btn plus btn-outline-light btn-sm">+</button> <span class='price'>${pr.Count}</span> <button type="button" class="btn minus btn-outline-light btn-sm">-</button></td>
         <td>${pr.Price_num*pr.Count}$</td>
       </tr>
         `

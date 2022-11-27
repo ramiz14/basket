@@ -63,3 +63,6 @@ td{
 th{
     width: 5%;
 }
+.price{
+    margin: 0 10px;
+}
