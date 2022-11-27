@@ -47,6 +47,7 @@ for(btn of plus){
             }
         }
         localStorage.setItem('products',JSON.stringify(basket))  
+        location.reload()
     }
 }
 
@@ -61,6 +62,7 @@ for(but of minus){
             }
         }
         localStorage.setItem('products',JSON.stringify(basket))  
+        location.reload()
     }
 }
 
