@@ -19,6 +19,7 @@
 }
 .card img{
     height: 200px;
+    object-fit: contain;
 }
 .empty{
     margin-top: 15%;
